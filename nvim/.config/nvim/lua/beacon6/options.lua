@@ -1,7 +1,6 @@
 vim.g.have_nerd_font = true
 
 vim.opt.number = true
-vim.opt.relativenumber = true
 
 vim.opt.mouse = 'a'
 
@@ -38,11 +37,12 @@ vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 vim.opt.inccommand = 'split'
 
 vim.opt.cursorline = true
+vim.opt.cursorlineopt = 'number'
 
 vim.opt.colorcolumn = '120'
 vim.opt.wrap = false
 
-vim.opt.scrolloff = 10
+vim.opt.scrolloff = 8
 
 vim.opt.hlsearch = true
 
