@@ -1,11 +1,15 @@
 format = """
 $directory\
 $git_branch\
-$git_status
+$git_status\
+$python
 $character
 """
 
 palette = "catppuccin_mocha"
+
+[python]
+format = '[(\[$virtualenv\])]($style)'
 
 [palettes.catppuccin_mocha]
 rosewater = "#f5e0dc"
