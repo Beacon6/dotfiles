@@ -6,8 +6,8 @@ return {
       require('lualine').setup {
         sections = {
           lualine_b = { 'branch', 'diff' },
-          lualine_c = { 'diagnostics', 'filename' },
-          lualine_x = { 'filetype' },
+          lualine_c = { 'filename' },
+          lualine_x = { { 'diagnostics', symbols = { error = 'E', warn = 'W', info = 'I', hint = 'H' } }, 'filetype' },
         },
       }
     end,

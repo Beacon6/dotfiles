@@ -12,6 +12,7 @@ fi
 alias la="ls -la"
 alias gs="git status"
 alias gd="git diff"
+alias vim="nvim ."
 alias av=". .venv/bin/activate"
 alias dv="deactivate"
 
