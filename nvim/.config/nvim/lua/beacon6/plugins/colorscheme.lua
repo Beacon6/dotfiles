@@ -9,7 +9,7 @@ return {
         show_end_of_buffer = true,
       }
 
-      vim.cmd.colorscheme 'catppuccin-mocha'
+      -- vim.cmd.colorscheme 'catppuccin-mocha'
     end,
   },
   {
@@ -23,7 +23,7 @@ return {
         },
       }
 
-      -- vim.cmd.colorscheme 'rose-pine-main'
+      vim.cmd.colorscheme 'rose-pine-main'
     end,
   },
 }
