@@ -8,8 +8,4 @@ return {
   {
     'christoomey/vim-tmux-navigator',
   },
-  {
-    'brenoprata10/nvim-highlight-colors',
-    opts = {},
-  },
 }
