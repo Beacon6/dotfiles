@@ -9,10 +9,13 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # Set aliases
-alias la="ls -la"
+alias la="ls -lA"
+alias ll="ls -l"
 alias gs="git status"
 alias gd="git diff"
-alias vim="nvim ."
+alias gr="git log --graph --oneline"
+alias gra="git log --graph --oneline --all"
+alias vim="nvim"
 alias av=". .venv/bin/activate"
 alias dv="deactivate"
 
