@@ -18,6 +18,7 @@ alias gra="git log --graph --oneline --all"
 alias vim="nvim"
 alias av=". .venv/bin/activate"
 alias dv="deactivate"
+alias lg="lazygit"
 
 # Add Go to PATH
 export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin
