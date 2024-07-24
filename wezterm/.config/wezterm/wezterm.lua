@@ -11,6 +11,4 @@ config.enable_scroll_bar = false
 
 config.use_fancy_tab_bar = false
 
-config.use_resize_increments = true
-
 return config
