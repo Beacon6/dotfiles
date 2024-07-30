@@ -7,8 +7,6 @@ vim.opt.mouse = 'a'
 
 vim.opt.showmode = false
 
-vim.opt.clipboard = 'unnamedplus'
-
 vim.opt.breakindent = true
 
 vim.opt.shiftwidth = 4
@@ -42,7 +40,9 @@ vim.opt.wrap = false
 
 vim.opt.scrolloff = 8
 
-vim.opt.hlsearch = true
+vim.schedule(function()
+  vim.opt.clipboard = 'unnamedplus'
+end)
 
 vim.api.nvim_create_autocmd('TextYankPost', {
   desc = 'Highlight when yanking (copying) text',
