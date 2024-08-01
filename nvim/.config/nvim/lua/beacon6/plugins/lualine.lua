@@ -5,9 +5,11 @@ return {
     config = function()
       require('lualine').setup {
         sections = {
-          lualine_b = { 'branch', 'diff' },
-          lualine_c = { 'filename' },
-          lualine_x = { { 'diagnostics', symbols = { error = 'E', warn = 'W', info = 'I', hint = 'H' } }, 'filetype' },
+          lualine_b = {
+            'branch',
+            'diff',
+            { 'diagnostics', symbols = { error = 'E', warn = 'W', info = 'I', hint = 'H' } },
+          },
         },
         options = {
           component_separators = '|',
