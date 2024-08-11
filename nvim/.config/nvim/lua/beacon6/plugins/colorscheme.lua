@@ -1,15 +1,16 @@
 return {
   {
-    'catppuccin/nvim',
-    name = 'catppuccin',
+    'rose-pine/neovim',
+    name = 'rose-pine',
     priority = 1000,
     init = function()
-      require('catppuccin').setup {
-        no_italic = true,
-        show_end_of_buffer = true,
+      require('rose-pine').setup {
+        styles = {
+          italic = false,
+        },
       }
 
-      vim.cmd.colorscheme 'catppuccin-mocha'
+      vim.cmd.colorscheme 'rose-pine-main'
     end,
   },
 }

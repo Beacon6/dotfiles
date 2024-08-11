@@ -2,7 +2,8 @@ local wezterm = require 'wezterm'
 
 local config = wezterm.config_builder()
 
-config.color_scheme = 'Catppuccin Mocha'
+config.colors = {}
+config.colors.background = '#1C1C1C'
 
 config.initial_cols = 160
 config.initial_rows = 40
