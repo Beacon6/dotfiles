@@ -1,11 +1,11 @@
 return {
-  {
-    'mbbill/undotree',
-    config = function()
-      vim.keymap.set('n', '<leader>u', vim.cmd.UndotreeToggle, { desc = '[U]ndotree Toggle' })
-    end,
-  },
-  {
-    'christoomey/vim-tmux-navigator',
-  },
+    {
+        "mbbill/undotree",
+        config = function()
+            vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle, { desc = "[U]ndotree Toggle" })
+        end,
+    },
+    {
+        "christoomey/vim-tmux-navigator",
+    },
 }
