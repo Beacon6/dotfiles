@@ -44,7 +44,7 @@ export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin
 export PATH=$PATH:/usr/local/node/bin
 
 # Add Python to PATH
-export PATH=$PATH:~/.pyenv/versions/3.12.4/bin
+export PATH=$PATH:~/.pyenv/versions/3.13.0/bin
 
 # Load Pyenv
 # export PYENV_ROOT="$HOME/.pyenv"
