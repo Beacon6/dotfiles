@@ -10,7 +10,7 @@ vim.opt.breakindent = true
 
 vim.opt.shiftwidth = 4
 vim.opt.softtabstop = 4
-vim.opt.tabstop = 8
+vim.opt.tabstop = 4
 vim.opt.expandtab = true
 
 vim.opt.smartindent = true
@@ -41,9 +41,7 @@ vim.opt.cursorline = true
 
 vim.opt.scrolloff = 8
 
-vim.schedule(function()
-    vim.opt.clipboard = "unnamedplus"
-end)
+vim.opt.clipboard = "unnamedplus"
 
 vim.api.nvim_create_autocmd("TextYankPost", {
     desc = "Highlight when yanking (copying) text",

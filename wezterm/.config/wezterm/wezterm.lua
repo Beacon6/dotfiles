@@ -3,8 +3,7 @@ local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
 config.colors = {}
-config.colors.background = "#1C1C1C"
-config.color_scheme = "rose-pine"
+config.color_scheme = "Tokyo Night"
 
 config.enable_scroll_bar = false
 
