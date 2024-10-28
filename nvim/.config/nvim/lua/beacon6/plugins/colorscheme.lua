@@ -1,31 +1,14 @@
 return {
   {
-    "folke/tokyonight.nvim",
-    lazy = false,
+    "catppuccin/nvim",
+    name = "catppuccin",
     priority = 1000,
     init = function()
-      require("tokyonight").setup({
-        style = "night",
-        styles = {
-          functions = {},
-        },
-        on_colors = function() end,
-        on_highlights = function() end,
+      require("catppuccin").setup({
+        show_end_of_buffer = true,
       })
 
-      vim.cmd.colorscheme("tokyonight")
-    end,
-  },
-  {
-    "rose-pine/neovim",
-    name = "rose-pine",
-    priority = 1000,
-    init = function()
-      require("rose-pine").setup({
-        styles = {
-          italic = false,
-        },
-      })
+      vim.cmd.colorscheme("catppuccin-mocha")
     end,
   },
 }
