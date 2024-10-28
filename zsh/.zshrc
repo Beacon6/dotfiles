@@ -43,6 +43,9 @@ export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin
 # Add Node to PATH
 export PATH=$PATH:/usr/local/node/bin
 
+# Add WebStorm to PATH
+export PATH=$PATH:/usr/local/WebStorm-242.23726.96/bin
+
 # Add Python to PATH
 export PATH=$PATH:~/.pyenv/versions/3.13.0/bin
 
