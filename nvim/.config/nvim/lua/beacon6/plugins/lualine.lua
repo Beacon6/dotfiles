@@ -8,7 +8,7 @@ return {
           lualine_b = {
             "branch",
             "diff",
-            { "diagnostics", symbols = { error = "E", warn = "W", info = "I", hint = "H" } },
+            "diagnostics",
           },
         },
         options = {
