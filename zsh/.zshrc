@@ -41,7 +41,10 @@ alias lg="lazygit"
 export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin
 
 # Add Node to PATH
-export PATH=$PATH:/usr/local/node/bin
+# export PATH=$PATH:/usr/local/node/bin
+
+# Add Node to PATH (Homebrew)
+export PATH=$PATH:/opt/homebrew/opt/node@22/bin
 
 # Add WebStorm to PATH
 export PATH=$PATH:/usr/local/WebStorm-242.23726.96/bin
