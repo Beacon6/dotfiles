@@ -5,6 +5,8 @@ local config = wezterm.config_builder()
 config.colors = {}
 config.color_scheme = "Catppuccin Mocha"
 
+config.font_size = 16.0
+
 config.enable_scroll_bar = false
 
 config.use_fancy_tab_bar = false
