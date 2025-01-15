@@ -18,6 +18,7 @@ require("lazy").setup({
     "folke/which-key.nvim",
     event = "VimEnter",
     opts = {
+      delay = 0,
       icons = {
         mappings = vim.g.have_nerd_font,
         keys = vim.g.have_nerd_font and {},
@@ -142,7 +143,7 @@ require("lazy").setup({
   { -- Main LSP Configuration
     "neovim/nvim-lspconfig",
     dependencies = {
-      { "williamboman/mason.nvim", config = true }, -- NOTE: Must be loaded before dependants
+      { "williamboman/mason.nvim", opts = {} }, -- NOTE: Must be loaded before dependants
       "williamboman/mason-lspconfig.nvim",
       "WhoIsSethDaniel/mason-tool-installer.nvim",
       { "j-hui/fidget.nvim", opts = {} },
@@ -277,7 +278,6 @@ require("lazy").setup({
         },
       }
 
-      require("mason").setup()
       local ensure_installed = vim.tbl_keys(servers or {})
       vim.list_extend(ensure_installed, {
         "stylua",
@@ -285,6 +285,8 @@ require("lazy").setup({
         "eslint",
       })
       require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
+
+      ---@diagnostic disable-next-line: missing-fields
       require("mason-lspconfig").setup({
         handlers = {
           function(server_name)
@@ -425,6 +427,8 @@ require("lazy").setup({
   },
 
   { import = "beacon6.plugins" },
+
+  ---@diagnostic disable-next-line: missing-fields
 }, {
   ui = {
     icons = vim.g.have_nerd_font and {},
