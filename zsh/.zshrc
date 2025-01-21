@@ -52,6 +52,9 @@ export PATH=$PATH:/usr/local/WebStorm-242.23726.96/bin
 # Add Python to PATH
 export PATH=$PATH:~/.pyenv/versions/3.13.0/bin
 
+# Add SQLite to PATH (Homebrew)
+export PATH=/opt/homebrew/opt/sqlite/bin:$PATH
+
 # Load Pyenv
 # export PYENV_ROOT="$HOME/.pyenv"
 # [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
