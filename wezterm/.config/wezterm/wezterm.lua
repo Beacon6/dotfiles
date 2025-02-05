@@ -3,7 +3,8 @@ local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
 config.colors = {}
-config.color_scheme = "Catppuccin Mocha"
+config.colors.background = "#000000"
+config.color_scheme = "rose-pine-moon"
 
 config.font_size = 16.0
 
