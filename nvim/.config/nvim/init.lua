@@ -14,27 +14,6 @@ end ---@diagnostic disable-next-line: undefined-field
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-  {
-    "folke/which-key.nvim",
-    event = "VimEnter",
-    opts = {
-      delay = 0,
-      icons = {
-        mappings = vim.g.have_nerd_font,
-        keys = vim.g.have_nerd_font and {},
-      },
-      spec = {
-        { "<leader>c", group = "[C]ode", mode = { "n", "x" } },
-        { "<leader>d", group = "[D]ocument" },
-        { "<leader>r", group = "[R]ename" },
-        { "<leader>s", group = "[S]earch" },
-        { "<leader>w", group = "[W]orkspace" },
-        { "<leader>t", group = "[T]oggle" },
-        { "<leader>g", group = "[G]it" },
-        { "<leader>h", group = "Git [H]unk", mode = { "n", "v" } },
-      },
-    },
-  },
   { -- Fuzzy Finder (files, lsp, etc)
     "nvim-telescope/telescope.nvim",
     event = "VimEnter",
