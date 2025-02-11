@@ -36,6 +36,8 @@ alias vim="nvim"
 alias av=". .venv/bin/activate"
 alias dv="deactivate"
 alias lg="lazygit"
+alias tns="tmux new -s main"
+alias tks="tmux kill-server"
 
 # Add Go to PATH
 export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin
