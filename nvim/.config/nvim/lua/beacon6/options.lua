@@ -35,7 +35,7 @@ vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 
 vim.opt.inccommand = "split"
 
-vim.opt.colorcolumn = "120"
+vim.opt.colorcolumn = "100"
 vim.opt.wrap = false
 
 vim.opt.scrolloff = 8
