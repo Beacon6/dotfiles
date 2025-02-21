@@ -261,8 +261,6 @@ require("lazy").setup({
       local ensure_installed = vim.tbl_keys(servers or {})
       vim.list_extend(ensure_installed, {
         "stylua",
-        "prettier",
-        "eslint",
       })
       require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 
@@ -294,25 +292,14 @@ require("lazy").setup({
     },
     opts = {
       notify_on_error = false,
-      format_on_save = function(bufnr)
-        local disable_filetypes = { c = true, cpp = true, html = true }
-        local lsp_format_opt
-        if disable_filetypes[vim.bo[bufnr].filetype] then
-          lsp_format_opt = "never"
-        else
-          lsp_format_opt = "fallback"
-        end
-        return {
-          timeout_ms = 500,
-          lsp_format = lsp_format_opt,
-        }
-      end,
       formatters_by_ft = {
         lua = { "stylua" },
         javascript = { "prettier" },
         javascriptreact = { "prettier" },
         typescript = { "prettier" },
         typescriptreact = { "prettier" },
+        json = { "prettier" },
+        html = { "prettier" },
       },
     },
   },
