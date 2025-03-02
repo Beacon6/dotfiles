@@ -412,6 +412,10 @@ require("lazy").setup({
             indent = { enable = true, disable = { "ruby" } },
         },
     },
+    {
+        "nvim-treesitter/nvim-treesitter-context",
+        opts = {}
+    },
 
     { import = "beacon6.plugins" },
 
