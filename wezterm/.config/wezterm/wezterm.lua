@@ -4,6 +4,7 @@ local config = wezterm.config_builder()
 
 config.colors = {}
 config.colors.background = "#000000"
+config.window_background_opacity = 0.8
 config.color_scheme = "rose-pine-moon"
 
 config.font_size = 16.0
