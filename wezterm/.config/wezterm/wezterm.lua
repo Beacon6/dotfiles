@@ -7,6 +7,7 @@ config.colors.background = "#000000"
 config.window_background_opacity = 0.9
 config.color_scheme = "rose-pine-moon"
 
+config.font = wezterm.font("Iosevka Term Extended")
 config.font_size = 16.0
 
 config.enable_scroll_bar = false
