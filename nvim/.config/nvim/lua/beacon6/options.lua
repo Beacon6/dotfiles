@@ -32,11 +32,8 @@ vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 vim.opt.inccommand = "split"
 
 vim.opt.colorcolumn = "100"
-vim.opt.wrap = false
 
 vim.opt.scrolloff = 8
-
-vim.opt.clipboard = "unnamedplus"
 
 vim.api.nvim_create_autocmd("TextYankPost", {
     desc = "Highlight when yanking (copying) text",

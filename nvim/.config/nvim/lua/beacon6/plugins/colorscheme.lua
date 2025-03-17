@@ -1,9 +1,9 @@
-function SetColors(color)
-    color = color or "tokyonight-moon"
-    vim.cmd.colorscheme(color)
+function SetColors(colorscheme, background_opacity)
+    background_opacity = background_opacity or 100
 
-    vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-    vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+    vim.cmd.colorscheme(colorscheme)
+    vim.api.nvim_set_hl(background_opacity, "Normal", { bg = "none" })
+    vim.api.nvim_set_hl(background_opacity, "NormalFloat", { bg = "none" })
 end
 
 return {
@@ -25,8 +25,9 @@ return {
                     transparency = true
                 },
             })
-
-            SetColors()
         end,
     },
+    {
+        "tjdevries/colorbuddy.nvim",
+    }
 }
