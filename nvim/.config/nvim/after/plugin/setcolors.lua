@@ -1,1 +1,1 @@
-SetColors("gruvbuddy", 0)
+SetColors("gruvbuddy")

@@ -3,19 +3,17 @@ local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
 config.colors = {}
-config.colors.background = "#000000"
-config.window_background_opacity = 0.9
-config.color_scheme = "rose-pine-moon"
+config.colors.background = "#111111"
+config.colors.cursor_bg = "#f8fe7a"
 
 config.font = wezterm.font("Iosevka Term Extended")
 config.font_size = 16.0
 
 config.enable_scroll_bar = false
 
-config.enable_tab_bar = false
 config.use_fancy_tab_bar = false
 
--- config.harfbuzz_features = { "calt=0", "clig=0", "liga=0" }
+config.harfbuzz_features = {"calt=0", "clig=0", "liga=0"}
 
 config.freetype_load_target = "Light"
 
