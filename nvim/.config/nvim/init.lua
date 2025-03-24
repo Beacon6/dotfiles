@@ -265,6 +265,13 @@ require("lazy").setup({
                         python = {
                             analysis = {
                                 typeCheckingMode = "off",
+                                exclude = {
+                                    "**/node_modules",
+                                    "**/__pycache__",
+                                    "**/.*",
+                                    "**/media",
+                                    "**/data-backup"
+                                }
                             },
                         },
                     },
@@ -412,10 +419,6 @@ require("lazy").setup({
             },
             indent = { enable = true, disable = { "ruby" } },
         },
-    },
-    {
-        "nvim-treesitter/nvim-treesitter-context",
-        opts = {}
     },
 
     { import = "beacon6.plugins" },
