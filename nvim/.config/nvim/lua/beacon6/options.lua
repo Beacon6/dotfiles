@@ -35,6 +35,8 @@ vim.opt.colorcolumn = "100"
 
 vim.opt.scrolloff = 8
 
+vim.opt.confirm = true
+
 vim.api.nvim_create_autocmd("TextYankPost", {
     desc = "Highlight when yanking (copying) text",
     group = vim.api.nvim_create_augroup("kickstart-highlight-yank", { clear = true }),
