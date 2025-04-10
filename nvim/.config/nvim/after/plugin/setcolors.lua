@@ -1,1 +1,0 @@
-SetColors("gruvbuddy")
