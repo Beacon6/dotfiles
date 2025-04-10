@@ -13,6 +13,7 @@ return {
                 "diff",
                 "html",
                 "htmldjango",
+                "css",
                 "lua",
                 "luadoc",
                 "markdown",
