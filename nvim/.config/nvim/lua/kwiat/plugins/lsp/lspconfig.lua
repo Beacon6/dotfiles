@@ -14,7 +14,6 @@ return {
         vim.api.nvim_create_autocmd("LspAttach", {
             group = vim.api.nvim_create_augroup("LspConfig", { clear = true }),
             callback = function(event)
-                print("INFO: LSP Attached")
                 local opts = { buffer = event.buf, silent = true }
 
                 opts.desc = "LSP: [G]oto [D]efinition"
@@ -43,7 +42,6 @@ return {
         vim.api.nvim_create_autocmd("LspDetach", {
             group = vim.api.nvim_create_augroup("LspCleanup", { clear = true }),
             callback = function(event)
-                print("INFO: LSP Detached")
                 vim.lsp.buf.clear_references()
                 vim.api.nvim_clear_autocmds({ group = "LspConfig", buffer = event.buf })
             end,
