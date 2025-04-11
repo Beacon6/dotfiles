@@ -9,4 +9,6 @@ config.color_scheme = "Catppuccin Macchiato"
 config.font = wezterm.font("Iosevka Term Extended")
 config.font_size = 16.0
 
+config.enable_tab_bar = false
+
 return config
