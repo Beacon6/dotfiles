@@ -4,7 +4,6 @@ return {
     dependencies = {
         "hrsh7th/cmp-nvim-lsp",
         "williamboman/mason-lspconfig.nvim",
-        { "j-hui/fidget.nvim", opts = {} },
     },
     config = function()
         local lspconfig = require("lspconfig")
