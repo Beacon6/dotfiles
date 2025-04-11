@@ -17,7 +17,6 @@ return {
             },
         })
         vim.keymap.set("n", "<leader>f", function()
-            print("INFO: Buffer Formatted")
             conform.format({ lsp_fallback = true, async = true, timeout_ms = 1000 })
         end, { desc = "[F]ormat Buffer" })
     end,
