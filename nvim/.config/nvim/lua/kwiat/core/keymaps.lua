@@ -1,15 +1,15 @@
 -- Leader key
 vim.g.mapleader = " "
 
--- Clear highlights
-vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>", { desc = "Clear search highlights" })
+-- Clear search highlights
+vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
 -- Move lines
-vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
-vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+vim.keymap.set("v", "<leader>j", ":m '>+1<CR>gv=gv", { desc = "Move line down" })
+vim.keymap.set("v", "<leader>k", ":m '<-2<CR>gv=gv", { desc = "Move line up" })
 
 -- Yank to system clipboard
-vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
+vim.keymap.set("v", "<leader>y", [["+y]], { desc = "Yank to system clipboard" })
 
 -- Tab management
 vim.keymap.set("n", "<leader>tt", "<cmd>tabnew<CR>", { desc = "New tab" })
@@ -21,7 +21,10 @@ vim.keymap.set("n", "<leader>tb", "<cmd>tabnew %<CR>", { desc = "Open current bu
 for i = 1, 5 do
     local key = string.format("<leader>%s", i)
     local command = string.format("<cmd>%stabn<CR>", i)
-    local desc = string.format("Go to tab [%s]", i)
+    local desc = string.format("Go to tab %s", i)
 
     vim.keymap.set("n", key, command, { desc = desc })
 end
+
+-- Diagnostics
+vim.keymap.set("n", "<leader>xk", vim.diagnostic.open_float, { desc = "Show diagnostic" })
