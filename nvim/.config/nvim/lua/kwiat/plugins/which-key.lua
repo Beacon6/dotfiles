@@ -5,5 +5,17 @@ return {
         vim.opt.timeout = true
         vim.opt.timeoutlen = 500
     end,
-    config = true,
+    config = function()
+        local wk = require("which-key")
+        wk.setup({
+            preset = "modern",
+        })
+
+        wk.add({
+            { "<leader>g", group = "Git" },
+            { "<leader>s", group = "Search" },
+            { "<leader>t", group = "Tab" },
+            { "<leader>x", group = "Diagnostics" },
+        })
+    end,
 }
