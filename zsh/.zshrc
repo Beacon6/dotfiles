@@ -25,36 +25,30 @@ setopt hist_ignore_dups
 setopt hist_find_no_dups
 
 # Set aliases
-alias c="clear"
-alias la="ls -lA"
-alias ll="ls -l"
+alias la="ls -la"
 alias gs="git status"
 alias gd="git diff"
-alias gr="git log --graph --oneline"
-alias gra="git log --graph --oneline --all"
+alias gr="git log --graph --oneline --all"
+alias gf="git fetch --prune"
 alias vim="nvim"
-alias av=". .venv/bin/activate"
+alias av="source .venv/bin/activate"
 alias dv="deactivate"
-alias lg="lazygit"
-alias tns="tmux new -s main"
-alias tks="tmux kill-server"
 
 # Add Go to PATH
 export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin
 
 # Add Node to PATH
 # export PATH=$PATH:/usr/local/node/bin
-
-# Add Node to PATH (Homebrew)
 export PATH=$PATH:/opt/homebrew/opt/node@22/bin
 
-# Add WebStorm to PATH
+# Add JetBrains to PATH
+# export PATH=$PATH:/usr/local/pycharm-2023.1.6/bin
 export PATH=$PATH:/usr/local/WebStorm-242.23726.96/bin
 
 # Add Python to PATH
-export PATH=$PATH:~/.pyenv/versions/3.13.0/bin
+export PATH=$PATH:~/.pyenv/versions/3.11.10/bin
 
-# Add SQLite to PATH (Homebrew)
+# Add SQLite to PATH
 export PATH=/opt/homebrew/opt/sqlite/bin:$PATH
 
 # Load Pyenv
