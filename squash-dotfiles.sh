@@ -24,7 +24,7 @@ COMMIT_MESSAGE="chore: squash history"
 
 echo "Found $TOTAL_COMMITS commits..."
 echo "Keeping the last $COMMITS_TO_KEEP commits..."
-echo "Squashing $COMMITS_TO_SQUASH commits..."
+echo "Squashing $((COMMITS_TO_SQUASH - 2)) commits..."
 echo "Using $BASE_COMMIT as base..."
 
 git checkout -b temp-squash "$BASE_COMMIT"
