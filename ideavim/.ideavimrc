@@ -12,6 +12,9 @@ set scrolloff=8
 " Do incremental searching.
 set incsearch
 
+" Use relative line numbers
+set rnu
+
 " Don't use Ex mode, use Q for formatting.
 map Q gq
 
