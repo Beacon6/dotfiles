@@ -17,6 +17,8 @@ vim.keymap.set("n", "<leader>tw", "<cmd>tabclose<CR>", { desc = "Close tab" })
 vim.keymap.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to previous tab" })
 vim.keymap.set("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Go to next tab" })
 vim.keymap.set("n", "<leader>tb", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" })
+vim.keymap.set("n", "<leader>th", "<cmd>-tabm<CR>", { desc = "Move tab to the left" })
+vim.keymap.set("n", "<leader>tl", "<cmd>+tabm<CR>", { desc = "Move tab to the right" })
 
 for i = 1, 5 do
     local key = string.format("<leader>%s", i)

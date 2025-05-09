@@ -28,7 +28,7 @@ return {
             vim.keymap.set("n", "<leader>sb", builtin.current_buffer_fuzzy_find, { desc = "Search buffer" })
             vim.keymap.set("n", "<leader>sw", builtin.grep_string, { desc = "Search word" })
             vim.keymap.set("n", "<leader>sc", builtin.commands, { desc = "Search commands" })
-            vim.keymap.set("n", "<leader>so", builtin.vim_options, { desc = "Search cptions" })
+            vim.keymap.set("n", "<leader>so", builtin.vim_options, { desc = "Search options" })
             vim.keymap.set("n", "<leader>sh", builtin.help_tags, { desc = "Search help" })
             vim.keymap.set("n", "<leader>sk", builtin.keymaps, { desc = "Search keymaps" })
         end,
