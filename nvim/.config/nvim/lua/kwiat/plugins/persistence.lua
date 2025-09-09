@@ -18,7 +18,6 @@ return {
                 end,
                 desc = 'Select the session to load',
             },
-
             {
                 '<leader>ql',
                 function()

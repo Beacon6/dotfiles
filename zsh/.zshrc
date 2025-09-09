@@ -36,12 +36,14 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 
 alias ls='ls --color'
 alias la='ls -lA'
+alias gs='git status'
+alias gss='git status --short'
 alias av='source .venv/bin/activate'
 alias dv='deactivate'
 
-export PATH=$PATH:$HOME/.local/share/uv/python/cpython-3.13.5-macos-aarch64-none/bin
-export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin
-export PATH=$PATH:/opt/homebrew/opt/node@22/bin
+export PATH=$HOME/.local/share/uv/python/cpython-3.13.7-macos-aarch64-none/bin:$PATH
+export PATH=/opt/homebrew/opt/node@22/bin:$PATH
+export PATH=$HOME/go/bin:$PATH
 
 eval "$(fzf --zsh)"
 eval "$(starship init zsh)"
