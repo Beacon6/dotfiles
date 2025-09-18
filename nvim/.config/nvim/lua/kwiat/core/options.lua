@@ -22,7 +22,6 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
 -- Appearance
-vim.opt.guicursor = ''
 vim.opt.showmode = false
 vim.opt.cursorline = true
 vim.opt.termguicolors = true

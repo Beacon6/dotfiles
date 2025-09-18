@@ -18,9 +18,11 @@ return {
         require('mason-lspconfig').setup({
             ensure_installed = {
                 'clangd',
+                'gopls',
                 'lua_ls',
                 'pyright',
                 'rust_analyzer',
+                'tailwindcss',
                 'ts_ls',
             },
         })

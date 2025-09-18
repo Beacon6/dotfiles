@@ -40,10 +40,9 @@ alias gs='git status'
 alias gss='git status --short'
 alias av='source .venv/bin/activate'
 alias dv='deactivate'
+alias lg='lazygit'
 
-export PATH=$HOME/.local/share/uv/python/cpython-3.13.7-macos-aarch64-none/bin:$PATH
-export PATH=/opt/homebrew/opt/node@22/bin:$PATH
-export PATH=$HOME/go/bin:$PATH
+source ~/.zsh_env_vars
 
 eval "$(fzf --zsh)"
 eval "$(starship init zsh)"
