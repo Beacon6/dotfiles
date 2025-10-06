@@ -9,6 +9,7 @@ return {
                     comments = { italic = false },
                     keywords = { italic = false },
                 },
+                lualine_bold = true,
             })
 
             vim.cmd('colorscheme tokyonight')
