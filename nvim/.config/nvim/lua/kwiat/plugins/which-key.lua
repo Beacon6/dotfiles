@@ -12,6 +12,7 @@ return {
         })
 
         wk.add({
+            { '<leader>b', group = 'Buffer' },
             { '<leader>g', group = 'Git' },
             { '<leader>s', group = 'Search' },
             { '<leader>t', group = 'Tab' },

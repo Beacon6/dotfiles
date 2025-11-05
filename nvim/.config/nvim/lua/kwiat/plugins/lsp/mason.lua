@@ -2,13 +2,8 @@ return {
     'mason-org/mason-lspconfig.nvim',
     opts = {
         ensure_installed = {
-            'clangd',
-            'gopls',
             'lua_ls',
             'pyright',
-            'rust_analyzer',
-            'tailwindcss',
-            'ts_ls',
         },
     },
     dependencies = {
@@ -30,6 +25,7 @@ return {
             'WhoIsSethDaniel/mason-tool-installer.nvim',
             opts = {
                 ensure_installed = {
+                    'mypy',
                     'ruff',
                     'stylua',
                 },
