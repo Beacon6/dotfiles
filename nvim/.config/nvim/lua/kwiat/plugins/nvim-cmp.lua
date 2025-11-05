@@ -5,12 +5,10 @@ return {
         'hrsh7th/cmp-nvim-lsp',
         'hrsh7th/cmp-buffer',
         'hrsh7th/cmp-path',
-        'hrsh7th/cmp-nvim-lsp-signature-help',
         'onsails/lspkind.nvim',
     },
     config = function()
         local cmp = require('cmp')
-        local lspkind = require('lspkind')
 
         cmp.setup({
             completion = {
@@ -29,13 +27,6 @@ return {
                 { name = 'nvim_lsp' },
                 { name = 'buffer' },
                 { name = 'path' },
-                { name = 'nvim_lsp_signature_help' },
-            },
-            formatting = {
-                format = lspkind.cmp_format({
-                    maxwidth = 50,
-                    ellipsis_char = '...',
-                }),
             },
         })
     end,
