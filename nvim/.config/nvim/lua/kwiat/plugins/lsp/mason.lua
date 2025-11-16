@@ -2,8 +2,11 @@ return {
     'mason-org/mason-lspconfig.nvim',
     opts = {
         ensure_installed = {
+            'clangd',
             'lua_ls',
             'pyright',
+            'ruff',
+            'stylua',
         },
     },
     dependencies = {
@@ -21,15 +24,5 @@ return {
         },
         { 'neovim/nvim-lspconfig' },
         { 'j-hui/fidget.nvim', opts = {} },
-        {
-            'WhoIsSethDaniel/mason-tool-installer.nvim',
-            opts = {
-                ensure_installed = {
-                    'mypy',
-                    'ruff',
-                    'stylua',
-                },
-            },
-        },
     },
 }
