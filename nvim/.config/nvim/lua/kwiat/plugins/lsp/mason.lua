@@ -7,6 +7,8 @@ return {
             'pyright',
             'ruff',
             'stylua',
+            'tailwindcss',
+            'ts_ls',
         },
     },
     dependencies = {
