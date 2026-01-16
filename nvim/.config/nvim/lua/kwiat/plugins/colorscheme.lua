@@ -1,30 +1,19 @@
 return {
-    {
-        'folke/tokyonight.nvim',
-        priority = 1000,
-        config = function()
-            ---@diagnostic disable-next-line: missing-fields
-            require('tokyonight').setup({
-                style = 'night',
-            })
+    'catppuccin/nvim',
+    name = 'catppuccin',
+    priority = 1000,
+    config = function()
+        local ctp = require('catppuccin')
+        ctp.setup({
+            flavour = 'macchiato',
+            transparent_background = true,
+            float = {
+                transparent = true,
+                solid = true,
+            },
+            show_end_of_buffer = true,
+        })
 
-            -- vim.cmd('colorscheme tokyonight')
-        end,
-    },
-    {
-        'rose-pine/neovim',
-        name = 'rose-pine',
-        priority = 1000,
-        config = function()
-            require('rose-pine').setup({
-                variant = 'moon',
-                styles = {
-                    italic = false,
-                    transparency = true,
-                },
-            })
-
-            vim.cmd('colorscheme rose-pine')
-        end,
-    },
+        vim.cmd.colorscheme('catppuccin')
+    end,
 }

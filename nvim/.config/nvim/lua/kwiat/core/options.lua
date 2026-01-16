@@ -1,6 +1,6 @@
 -- Leader key
 vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
+vim.g.maplocalleader = '\\'
 
 -- Line numbers
 vim.opt.number = true
@@ -24,7 +24,7 @@ vim.opt.smartcase = true
 -- Appearance
 vim.opt.showmode = false
 vim.opt.cursorline = true
-vim.opt.guicursor = ''
+-- vim.opt.guicursor = ''
 vim.opt.termguicolors = true
 vim.opt.signcolumn = 'yes'
 vim.opt.colorcolumn = '120'
@@ -52,6 +52,3 @@ vim.api.nvim_create_autocmd('TextYankPost', {
         vim.highlight.on_yank()
     end,
 })
-
--- Confirm if unsaved changes on exit
-vim.opt.confirm = true

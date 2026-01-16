@@ -6,18 +6,20 @@ return {
             lua = { 'stylua' },
             python = { 'ruff_format' },
         },
-        format_on_save = {
-            lsp_format = 'fallback',
-            timeout_ms = 500,
-        },
     },
     keys = {
         {
-            '<leader>bf',
+            '<leader>cf',
             function()
-                require('conform').format({ lsp_format = 'fallback', timeout_ms = 500 })
+                local conform = require('conform')
+                conform.format({ async = true, lsp_format = 'fallback', timeout_ms = 500 }, function(err)
+                    if not err then
+                        local path = vim.fn.expand('%')
+                        vim.notify(string.format('"%s" formatted', path), vim.log.levels.INFO)
+                    end
+                end)
             end,
-            desc = 'Format Buffer',
+            desc = '[C]ode [F]ormat',
         },
     },
 }

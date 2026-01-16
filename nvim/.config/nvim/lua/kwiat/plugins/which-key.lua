@@ -1,22 +1,16 @@
 return {
     'folke/which-key.nvim',
     event = 'VeryLazy',
-    init = function()
-        vim.opt.timeout = true
-        vim.opt.timeoutlen = 500
-    end,
-    config = function()
-        local wk = require('which-key')
-        wk.setup({
-            preset = 'helix',
-        })
-
-        wk.add({
+    opts = {
+        preset = 'helix',
+        spec = {
             { '<leader>b', group = 'Buffer' },
+            { '<leader>c', group = 'Code' },
+            { '<leader>d', group = 'Diagnostics' },
             { '<leader>g', group = 'Git' },
             { '<leader>s', group = 'Search' },
+            { '<leader>l', group = 'Session' },
             { '<leader>t', group = 'Tab' },
-            { '<leader>x', group = 'Diagnostics' },
-        })
-    end,
+        },
+    },
 }

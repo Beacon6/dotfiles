@@ -17,7 +17,12 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 -- Setup lazy.nvim
-require('lazy').setup({ { import = 'kwiat.plugins' }, { import = 'kwiat.plugins.lsp' } }, {
-    change_detection = { notify = false },
-    checker = { enabled = true, notify = false },
+require('lazy').setup({
+    spec = {
+        { import = 'kwiat.plugins' },
+        { import = 'kwiat.plugins.lsp' },
+    },
+    change_detection = {
+        notify = false,
+    },
 })

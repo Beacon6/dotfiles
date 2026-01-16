@@ -1,10 +1,17 @@
 return {
     'folke/trouble.nvim',
-    opts = {},
-    cmd = 'Trouble',
     event = 'VeryLazy',
+    opts = {},
     keys = {
-        { '<leader>xx', '<cmd>Trouble diagnostics toggle<cr>', desc = 'Diagnostics' },
-        { '<leader>xw', '<cmd>Trouble diagnostics toggle filter.buf=0<cr>', desc = 'Workspace diagnostics' },
+        {
+            '<leader>dp',
+            '<CMD>Trouble diagnostics toggle<CR>',
+            desc = '[D]iagnostics - [P]roject',
+        },
+        {
+            '<leader>db',
+            '<CMD>Trouble diagnostics toggle filter.buf=0<CR>',
+            desc = '[D]iagnostics - [B]uffer',
+        },
     },
 }

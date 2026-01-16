@@ -4,11 +4,13 @@ return {
         'nvim-tree/nvim-web-devicons',
     },
     config = function()
-        require('oil').setup({
+        local oil = require('oil')
+        oil.setup({
             view_options = {
                 show_hidden = true,
             },
         })
+
         vim.keymap.set('n', '-', '<CMD>Oil<CR>')
     end,
 }

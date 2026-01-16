@@ -2,8 +2,11 @@
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
 -- Move lines
-vim.keymap.set('v', '<leader>j', ":m '>+1<CR>gv=gv", { desc = 'Move line down' })
-vim.keymap.set('v', '<leader>k', ":m '<-2<CR>gv=gv", { desc = 'Move line up' })
+vim.keymap.set('v', '<M-j>', ":m '>+1<CR>gv=gv", { desc = 'Move line down' })
+vim.keymap.set('v', '<M-k>', ":m '<-2<CR>gv=gv", { desc = 'Move line up' })
+
+vim.keymap.set('v', '∆', ":m '>+1<CR>gv=gv", { desc = 'Move line down' })
+vim.keymap.set('v', 'Ż', ":m '<-2<CR>gv=gv", { desc = 'Move line up' })
 
 -- Yank to system clipboard
 vim.keymap.set('v', '<leader>y', [["+y]], { desc = 'Yank to system clipboard' })
@@ -24,6 +27,3 @@ for i = 1, 5 do
 
     vim.keymap.set('n', key, command, { desc = desc })
 end
-
--- Diagnostics
-vim.keymap.set('n', '<leader>xk', vim.diagnostic.open_float, { desc = 'Show diagnostic' })
