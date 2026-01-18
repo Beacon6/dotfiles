@@ -12,6 +12,13 @@ return {
                 solid = true,
             },
             show_end_of_buffer = true,
+            integrations = {
+                indent_blankline = {
+                    enabled = true,
+                    scope_color = 'blue',
+                    colored_indent_levels = false,
+                },
+            },
         })
 
         vim.cmd.colorscheme('catppuccin')

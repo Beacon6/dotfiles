@@ -20,7 +20,6 @@ vim.opt.rtp:prepend(lazypath)
 require('lazy').setup({
     spec = {
         { import = 'kwiat.plugins' },
-        { import = 'kwiat.plugins.lsp' },
     },
     change_detection = {
         notify = false,

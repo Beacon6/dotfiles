@@ -5,6 +5,10 @@ return {
         formatters_by_ft = {
             lua = { 'stylua' },
             python = { 'ruff_format' },
+            javascript = { 'prettierd', 'prettier' },
+            typescript = { 'prettierd', 'prettier' },
+            json = { 'prettierd', 'prettier' },
+            html = { 'prettierd', 'prettier' },
         },
     },
     keys = {
