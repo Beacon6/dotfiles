@@ -36,6 +36,7 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 
 alias ls='ls --color'
 alias la='ls -lA'
+alias vim='nvim'
 alias gs='git status'
 alias gss='git status --short'
 alias av='source .venv/bin/activate'
