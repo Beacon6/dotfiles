@@ -35,7 +35,7 @@ zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 
 alias ls='ls --color'
-alias la='ls -lA'
+alias la='ls -lArh'
 alias vim='nvim'
 alias gs='git status'
 alias gss='git status --short'
