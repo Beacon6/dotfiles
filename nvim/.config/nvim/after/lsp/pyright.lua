@@ -1,9 +1,9 @@
--- vim.lsp.config('pyright', {
---     settings = {
---         python = {
---             analysis = {
---                 typeCheckingMode = 'off',
---             },
---         },
---     },
--- })
+return {
+    settings = {
+        python = {
+            analysis = {
+                typeCheckingMode = 'off',
+            },
+        },
+    },
+}
