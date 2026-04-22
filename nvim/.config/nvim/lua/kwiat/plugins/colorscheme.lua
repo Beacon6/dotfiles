@@ -1,26 +1,15 @@
 return {
-    'catppuccin/nvim',
-    name = 'catppuccin',
+    'folke/tokyonight.nvim',
+    lazy = false,
     priority = 1000,
     config = function()
-        local ctp = require('catppuccin')
-        ctp.setup({
-            flavour = 'macchiato',
-            transparent_background = true,
-            float = {
-                transparent = true,
-                solid = true,
-            },
-            show_end_of_buffer = true,
-            integrations = {
-                indent_blankline = {
-                    enabled = true,
-                    scope_color = 'blue',
-                    colored_indent_levels = false,
-                },
-            },
+        local tokyo = require('tokyonight')
+        ---@diagnostic disable-next-line: missing-fields
+        tokyo.setup({
+            style = 'moon',
+            transparent = true,
+            lualine_bold = true,
         })
-
-        vim.cmd.colorscheme('catppuccin')
+        vim.cmd.colorscheme('tokyonight')
     end,
 }

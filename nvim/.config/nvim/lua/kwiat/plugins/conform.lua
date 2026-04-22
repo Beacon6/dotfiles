@@ -16,7 +16,7 @@ return {
             '<leader>cf',
             function()
                 local conform = require('conform')
-                conform.format({ async = true, lsp_format = 'fallback', timeout_ms = 500 }, function(err)
+                conform.format({ async = true, stop_after_first = true }, function(err)
                     if not err then
                         local path = vim.fn.expand('%')
                         vim.notify(string.format('"%s" formatted', path), vim.log.levels.INFO)
