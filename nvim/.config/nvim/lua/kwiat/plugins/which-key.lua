@@ -8,7 +8,6 @@ return {
             { '<leader>d', group = 'Diagnostics' },
             { '<leader>g', group = 'Git' },
             { '<leader>s', group = 'Search' },
-            { '<leader>l', group = 'Session' },
             { '<leader>t', group = 'Tab' },
         },
     },
