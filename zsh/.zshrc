@@ -56,4 +56,4 @@ source ~/.zsh_env_vars
 
 eval "$(fzf --zsh)"
 source "${HOMEBREW_PREFIX}/share/powerlevel10k/powerlevel10k.zsh-theme"
-source "${HOMEBREW_PREFIX}/share/powerlevel10k/config/p10k-robbyrussell.zsh"
+source "${HOME}/dotfiles/p10k-robbyrussell.zsh"
