@@ -1,8 +1,10 @@
-theme = TokyoNight Moon
+theme = Rose Pine Moon
 font-size = 14
 background-opacity = 0.9
 background-blur = true
 window-padding-x = 8
 window-padding-y = 8
+mouse-hide-while-typing = true
+macos-option-as-alt = true
 shell-integration-features = no-cursor
 term = xterm-256color

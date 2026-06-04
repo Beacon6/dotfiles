@@ -4,6 +4,10 @@ return {
         local lint = require('lint')
         lint.linters_by_ft = {
             python = { 'mypy' },
+            javascript = { 'eslint' },
+            javascriptreact = { 'eslint' },
+            typescript = { 'eslint' },
+            typescriptreact = { 'eslint' },
         }
 
         vim.api.nvim_create_autocmd({ 'BufWritePost', 'BufEnter' }, {
