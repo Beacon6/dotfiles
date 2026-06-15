@@ -59,5 +59,4 @@ vim.diagnostic.config({
         focusable = false,
         source = true,
     },
-    virtual_text = true,
 })
