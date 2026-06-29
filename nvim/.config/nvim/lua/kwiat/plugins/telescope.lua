@@ -6,6 +6,18 @@ return {
         { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
     },
     config = function()
+        local telescope = require('telescope')
+        telescope.setup({
+            pickers = {
+                find_files = {
+                    theme = 'ivy',
+                },
+                live_grep = {
+                    theme = 'ivy',
+                },
+            },
+        })
+
         local builtin = require('telescope.builtin')
         vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = '[] Open Buffers' })
         vim.keymap.set('n', '<leader>sb', builtin.current_buffer_fuzzy_find, { desc = '[S]earch [B]uffer' })

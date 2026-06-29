@@ -31,6 +31,7 @@ vim.opt.colorcolumn = '120'
 vim.opt.list = true
 vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 vim.opt.scrolloff = 8
+vim.opt.winborder = 'rounded'
 
 -- Splits
 vim.opt.splitright = true
