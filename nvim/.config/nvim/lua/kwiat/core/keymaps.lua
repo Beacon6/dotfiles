@@ -1,6 +1,9 @@
 -- Clear search highlights
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
+-- Diagnostics
+vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
+
 -- Move lines
 vim.keymap.set('v', '<M-j>', ":m '>+1<CR>gv=gv", { desc = 'Move line down' })
 vim.keymap.set('v', '<M-k>', ":m '<-2<CR>gv=gv", { desc = 'Move line up' })

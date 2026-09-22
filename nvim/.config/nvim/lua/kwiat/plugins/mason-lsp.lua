@@ -10,7 +10,7 @@ return {
             'pyright',
             'ruff',
             'stylua',
-            'ts_ls',
+            'vtsls',
         },
     },
 }

@@ -11,6 +11,7 @@ return {
             typescriptreact = { 'prettierd', 'prettier' },
             json = { 'prettierd', 'prettier' },
             jsonc = { 'prettierd', 'prettier' },
+            markdown = { 'prettierd', 'prettier' },
             html = { 'prettierd', 'prettier' },
             css = { 'prettierd', 'prettier' },
             c = { 'clang-format' },

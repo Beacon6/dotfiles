@@ -55,9 +55,16 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 })
 
 vim.diagnostic.config({
-    float = {
-        border = 'rounded',
-        focusable = false,
-        source = true,
+    severity_sort = true,
+    virtual_text = true,
+    float = { source = 'if_many' },
+    jump = {
+        on_jump = function(_, bufnr)
+            vim.diagnostic.open_float({
+                bufnr = bufnr,
+                scope = 'cursor',
+                focus = false,
+            })
+        end,
     },
 })

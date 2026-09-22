@@ -3,9 +3,20 @@ return {
     version = '0.2.*',
     dependencies = {
         'nvim-lua/plenary.nvim',
+        'nvim-telescope/telescope-ui-select.nvim',
         { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
     },
     config = function()
+        local telescope = require('telescope')
+        local telescope_themes = require('telescope.themes')
+        telescope.setup({
+            extensions = {
+                ['ui-select'] = { telescope_themes.get_dropdown() },
+            },
+        })
+        telescope.load_extension('ui-select')
+        telescope.load_extension('fzf')
+
         local builtin = require('telescope.builtin')
         vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = '[] Open Buffers' })
         vim.keymap.set('n', '<leader>sb', builtin.current_buffer_fuzzy_find, { desc = '[S]earch [B]uffer' })
@@ -28,7 +39,7 @@ return {
                 vim.keymap.set('n', 'gd', builtin.lsp_definitions, opts)
 
                 opts.desc = 'LSP: [G]oto [R]eferences'
-                vim.keymap.set('n', 'gr', builtin.lsp_references, opts)
+                vim.keymap.set('n', 'grr', builtin.lsp_references, opts)
 
                 opts.desc = 'LSP: [D]ocument [S]ymbols'
                 vim.keymap.set('n', '<leader>ds', builtin.lsp_document_symbols, opts)

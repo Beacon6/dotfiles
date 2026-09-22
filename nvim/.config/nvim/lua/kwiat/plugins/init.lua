@@ -15,12 +15,4 @@ return {
         'j-hui/fidget.nvim',
         opts = {},
     },
-    {
-        'rachartier/tiny-inline-diagnostic.nvim',
-        event = 'VeryLazy',
-        priority = 1000,
-        opts = {
-            preset = 'simple',
-        },
-    },
 }
