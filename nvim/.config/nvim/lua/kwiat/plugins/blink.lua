@@ -23,7 +23,7 @@ return {
             },
         },
         sources = {
-            default = { 'lazydev', 'lsp', 'path', 'snippets', 'buffer' },
+            default = { 'lazydev', 'lsp', 'path', 'snippets' },
             providers = {
                 lazydev = {
                     name = 'LazyDev',
@@ -35,6 +35,6 @@ return {
         fuzzy = {
             implementation = 'prefer_rust_with_warning',
         },
+        signature = { enabled = true },
     },
-    opts_extend = { 'sources.default' },
 }

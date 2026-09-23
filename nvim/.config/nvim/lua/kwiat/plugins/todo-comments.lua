@@ -3,6 +3,6 @@ return {
     dependencies = {
         'nvim-lua/plenary.nvim',
     },
-    event = { 'BufReadPre', 'BufNewFile' },
+    event = { 'BufReadPost', 'BufNewFile' },
     opts = {},
 }

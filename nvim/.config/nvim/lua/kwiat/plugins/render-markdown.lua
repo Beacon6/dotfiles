@@ -3,6 +3,6 @@ return {
     dependencies = {
         'nvim-tree/nvim-web-devicons',
     },
-    event = { 'BufReadPre', 'BufNewFile' },
-    config = true,
+    event = { 'BufReadPost', 'BufNewFile' },
+    opts = {},
 }
