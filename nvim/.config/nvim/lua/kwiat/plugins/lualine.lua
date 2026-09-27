@@ -5,7 +5,7 @@ return {
     opts = {
         sections = {
             lualine_b = {
-                'branch',
+                { 'branch', icon = ' ' },
                 {
                     'diff',
                     symbols = {

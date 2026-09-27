@@ -4,12 +4,13 @@ vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 -- Diagnostics
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 
--- Move lines
-vim.keymap.set('v', '<M-j>', ":m '>+1<CR>gv=gv", { desc = 'Move line down' })
-vim.keymap.set('v', '<M-k>', ":m '<-2<CR>gv=gv", { desc = 'Move line up' })
+-- Better up/down movement
+vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true })
+vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true })
 
-vim.keymap.set('v', '∆', ":m '>+1<CR>gv=gv", { desc = 'Move line down' })
-vim.keymap.set('v', 'Ż', ":m '<-2<CR>gv=gv", { desc = 'Move line up' })
+-- Move selected line
+vim.keymap.set('v', '<leader>j', ":m '>+1<CR>gv=gv", { desc = 'Move line down' })
+vim.keymap.set('v', '<leader>k', ":m '<-2<CR>gv=gv", { desc = 'Move line up' })
 
 -- Yank to system clipboard
 vim.keymap.set('v', '<leader>y', [["+y]], { desc = 'Yank to system clipboard' })

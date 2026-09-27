@@ -11,11 +11,12 @@ vim.opt.shiftwidth = 4
 vim.opt.softtabstop = 4
 vim.opt.tabstop = 4
 vim.opt.expandtab = true
+
+-- Wrapping and indentation
+vim.opt.wrap = true
+vim.opt.linebreak = true
 vim.opt.breakindent = true
 vim.opt.autoindent = true
-
--- Wrapping
-vim.opt.wrap = false
 
 -- Search
 vim.opt.ignorecase = true

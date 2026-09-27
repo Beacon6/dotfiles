@@ -18,51 +18,37 @@ return {
         telescope.load_extension('fzf')
 
         local builtin = require('telescope.builtin')
-        vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = '[] Open Buffers' })
-        vim.keymap.set('n', '<leader>sb', builtin.current_buffer_fuzzy_find, { desc = '[S]earch [B]uffer' })
-        vim.keymap.set('n', '<leader>sc', builtin.commands, { desc = '[S]earch [C]ommands' })
-        vim.keymap.set('n', '<leader>sd', builtin.diagnostics, { desc = '[S]earch [D]iagnostics' })
-        vim.keymap.set('n', '<leader>sf', builtin.find_files, { desc = '[S]earch [F]iles' })
-        vim.keymap.set('n', '<leader>sg', builtin.git_files, { desc = '[S]earch [G]it' })
-        vim.keymap.set('n', '<leader>sh', builtin.help_tags, { desc = '[S]earch [H]elp' })
-        vim.keymap.set('n', '<leader>sk', builtin.keymaps, { desc = '[S]earch [K]eymaps' })
-        vim.keymap.set('n', '<leader>so', builtin.vim_options, { desc = '[S]earch [O]ptions' })
-        vim.keymap.set('n', '<leader>ss', builtin.live_grep, { desc = '[S]earch [S]tring' })
-        vim.keymap.set('n', '<leader>sw', builtin.grep_string, { desc = '[S]earch [W]ord' })
+        local themes = require('telescope.themes')
+        vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = '[F]ind open buffers' })
+        vim.keymap.set('n', '<leader>/', function()
+            builtin.current_buffer_fuzzy_find(themes.get_dropdown({ previewer = false }))
+        end, { desc = '[F]ind in current buffer' })
+        vim.keymap.set('n', '<leader>fc', builtin.commands, { desc = '[F]ind [C]ommands' })
+        vim.keymap.set('n', '<leader>fd', builtin.diagnostics, { desc = '[F]ind [D]iagnostics' })
+        vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = '[F]ind [F]iles' })
+        vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = '[F]ind by [G]rep' })
+        vim.keymap.set('n', '<leader>fG', builtin.git_files, { desc = '[F]ind [G]it files' })
+        vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = '[F]ind [H]elp' })
+        vim.keymap.set('n', '<leader>fk', builtin.keymaps, { desc = '[F]ind [K]eymaps' })
+        vim.keymap.set('n', '<leader>fo', builtin.vim_options, { desc = '[F]ind [O]ptions' })
+        vim.keymap.set('n', '<leader>ft', builtin.builtin, { desc = '[F]ind [T]elescope picker' })
+        vim.keymap.set({ 'n', 'v' }, '<leader>fw', builtin.grep_string, { desc = '[F]ind current [W]ord' })
 
         vim.api.nvim_create_autocmd('LspAttach', {
-            group = vim.api.nvim_create_augroup('LspConfig', { clear = true }),
+            group = vim.api.nvim_create_augroup('TelescopeLspAttach', { clear = true }),
             callback = function(event)
-                local opts = { buffer = event.buf, silent = true }
+                local function map(keys, func, desc)
+                    vim.keymap.set('n', keys, func, {
+                        buffer = event.buf,
+                        silent = false,
+                        desc = 'LSP: ' .. desc,
+                    })
+                end
 
-                opts.desc = 'LSP: [G]oto [D]efinition'
-                vim.keymap.set('n', 'gd', builtin.lsp_definitions, opts)
-
-                opts.desc = 'LSP: [G]oto [R]eferences'
-                vim.keymap.set('n', 'grr', builtin.lsp_references, opts)
-
-                opts.desc = 'LSP: [D]ocument [S]ymbols'
-                vim.keymap.set('n', '<leader>ds', builtin.lsp_document_symbols, opts)
-
-                opts.desc = 'LSP: [W]orkspace [S]ymbols'
-                vim.keymap.set('n', '<leader>ws', builtin.lsp_dynamic_workspace_symbols, opts)
-
-                opts.desc = 'LSP: [R]e[n]ame'
-                vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, opts)
-
-                opts.desc = 'LSP: [C]ode [A]ction'
-                vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, opts)
-
-                opts.desc = 'LSP: [R]estart [L]SP'
-                vim.keymap.set('n', '<leader>rl', '<cmd>LspRestart<CR>', opts)
-            end,
-        })
-
-        vim.api.nvim_create_autocmd('LspDetach', {
-            group = vim.api.nvim_create_augroup('LspCleanup', { clear = true }),
-            callback = function(event)
-                vim.lsp.buf.clear_references()
-                vim.api.nvim_clear_autocmds({ group = 'LspConfig', buffer = event.buf })
+                map('grd', builtin.lsp_definitions, '[G]oto [D]efinition')
+                map('gri', builtin.lsp_implementations, '[G]oto [I]mplementation')
+                map('grr', builtin.lsp_references, '[G]oto [R]eferences')
+                map('grt', builtin.lsp_type_definitions, '[G]oto [T]ype definition')
             end,
         })
     end,
