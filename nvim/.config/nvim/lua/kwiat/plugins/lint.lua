@@ -1,5 +1,12 @@
 return {
     'mfussenegger/nvim-lint',
+    ft = {
+        'python',
+        'javascript',
+        'javascriptreact',
+        'typescript',
+        'typescriptreact',
+    },
     config = function()
         local lint = require('lint')
         lint.linters_by_ft = {

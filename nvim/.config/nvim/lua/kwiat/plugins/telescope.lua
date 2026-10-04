@@ -8,17 +8,16 @@ return {
     },
     config = function()
         local telescope = require('telescope')
-        local telescope_themes = require('telescope.themes')
+        local builtin = require('telescope.builtin')
+        local themes = require('telescope.themes')
         telescope.setup({
             extensions = {
-                ['ui-select'] = { telescope_themes.get_dropdown() },
+                ['ui-select'] = { themes.get_dropdown() },
             },
         })
         telescope.load_extension('ui-select')
         telescope.load_extension('fzf')
 
-        local builtin = require('telescope.builtin')
-        local themes = require('telescope.themes')
         vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = '[F]ind open buffers' })
         vim.keymap.set('n', '<leader>/', function()
             builtin.current_buffer_fuzzy_find(themes.get_dropdown({ previewer = false }))
@@ -40,11 +39,11 @@ return {
                 local function map(keys, func, desc)
                     vim.keymap.set('n', keys, func, {
                         buffer = event.buf,
-                        silent = false,
                         desc = 'LSP: ' .. desc,
                     })
                 end
 
+                map('gd', builtin.lsp_definitions, '[G]oto [D]efinition')
                 map('grd', builtin.lsp_definitions, '[G]oto [D]efinition')
                 map('gri', builtin.lsp_implementations, '[G]oto [I]mplementation')
                 map('grr', builtin.lsp_references, '[G]oto [R]eferences')
