@@ -1,3 +1,3 @@
-require('kwiat.options')
-require('kwiat.keymaps')
-require('kwiat.lazy')
+require("kwiat.options")
+require("kwiat.keymaps")
+require("kwiat.lazy")

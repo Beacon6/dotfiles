@@ -17,6 +17,7 @@ vim.opt.rtp:prepend(lazypath)
 local lazy = require("lazy")
 lazy.setup({
     spec = {
+        { "folke/lazydev.nvim", ft = "lua", opts = {} },
         { import = "kwiat.plugins" },
     },
     change_detection = {
