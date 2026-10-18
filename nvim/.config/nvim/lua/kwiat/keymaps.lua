@@ -1,12 +1,12 @@
 -- Clear search highlights
-vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
+vim.keymap.set("n", "<Esc>", vim.cmd.nohlsearch)
 
 -- Quickfix navigation
-vim.keymap.set("n", "<C-j>", "<cmd>cnext<CR>")
-vim.keymap.set("n", "<C-k>", "<cmd>cprev<CR>")
+vim.keymap.set("n", "<C-j>", vim.cmd.cnext)
+vim.keymap.set("n", "<C-k>", vim.cmd.cprev)
 
 -- Format buffer
 vim.keymap.set("n", "<leader>cf", vim.lsp.buf.format)
 
 -- Toggle floating terminal
-vim.keymap.set({ "n", "t" }, "<C-`>", "<cmd>FloatingTerminal<CR>")
+vim.keymap.set({ "n", "t" }, "<C-`>", vim.cmd.FloatingTerminal)
