@@ -1,22 +1,21 @@
 return {
-    'stevearc/oil.nvim',
-    dependencies = {
-        'nvim-tree/nvim-web-devicons',
-    },
+    "stevearc/oil.nvim",
+    dependencies = { { "nvim-mini/mini.icons", opts = {} } },
     config = function()
-        local oil = require('oil')
+        local oil = require("oil")
+
         oil.setup({
             columns = {
-                'icon',
-                'permissions',
-                'size',
-                'mtime',
+                "icon",
+                "permissions",
+                "size",
+                "mtime"
             },
             view_options = {
-                show_hidden = true,
-            },
+                show_hidden = true
+            }
         })
 
-        vim.keymap.set('n', '-', '<CMD>Oil<CR>')
-    end,
+        vim.keymap.set("n", "-", "<CMD>Oil<CR>")
+    end
 }
