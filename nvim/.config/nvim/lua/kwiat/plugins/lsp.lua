@@ -12,6 +12,9 @@ return {
     "neovim/nvim-lspconfig",
     config = function()
         local servers = { "lua_ls", "pyright", "ruff", "vtsls" }
+        vim.lsp.config("pyright", {
+            settings = { python = { analysis = { typeCheckingMode = "off" } } }
+        })
         for _, v in ipairs(servers) do
             vim.lsp.enable(v)
         end
