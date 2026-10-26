@@ -7,6 +7,3 @@ vim.keymap.set("n", "<C-k>", vim.cmd.cprev)
 
 -- Format buffer
 vim.keymap.set("n", "<leader>cf", vim.lsp.buf.format)
-
--- Toggle floating terminal
-vim.keymap.set({ "n", "t" }, "<C-`>", vim.cmd.FloatingTerminal)
