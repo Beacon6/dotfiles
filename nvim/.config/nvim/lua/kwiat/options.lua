@@ -27,6 +27,7 @@ vim.opt.list = true
 vim.opt.listchars = { tab = "» ", trail = "·" }
 vim.opt.scrolloff = 8
 vim.opt.winborder = "rounded"
+vim.opt.termguicolors = true
 
 -- Splits
 vim.opt.splitright = true
