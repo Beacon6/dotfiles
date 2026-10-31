@@ -1,4 +1,5 @@
 theme = TokyoNight Moon
+font-family = SF Mono
 font-size = 14
 background-opacity = 0.9
 background-blur = true
