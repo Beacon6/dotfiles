@@ -18,6 +18,7 @@ local lazy = require("lazy")
 lazy.setup({
     spec = {
         { "folke/lazydev.nvim", ft = "lua", opts = {} },
+        { "christoomey/vim-tmux-navigator" },
         { import = "kwiat.plugins" },
     },
     change_detection = {

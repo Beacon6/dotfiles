@@ -14,6 +14,13 @@ return {
         end
     },
     {
+        "nvim-mini/mini.trailspace",
+        config = function()
+            local trailspace = require("mini.trailspace")
+            trailspace.setup()
+        end
+    },
+    {
         "nvim-mini/mini.hues",
         config = function()
             vim.cmd.colorscheme("minischeme")
